@@ -20,19 +20,34 @@ Page Pulse is a lightweight, high-performance Node.js web service that audits pu
    ```bash
       git clone [https://github.com/nyjilmeharaj/Page-pulse.git](https://github.com/nyjilmeharaj/Page-pulse.git)
          cd Page-pulse
-{
-      "url": "example.com"
-      }
+ ## 📡 API Contract
 
-{
-      "url": "[http://example.com](http://example.com)",
-        "httpStatus": 200,
-          "responseTimeMs": 142,
-            "title": "Example Domain",
-              "metaDescription": "",
-                "h1Count": 1,
-                  "imagesMissingAlt": 0,
-                    "totalImages": 0,
-                      "wordCount": 11
-                      }
+ ### `POST /api/audit`
 
+ Audits a target web page URL and returns DOM and HTTP performance metrics.
+
+ #### **Request Header**
+ - `Content-Type: application/json`
+
+ #### **Request Body**
+ ```json
+ {
+   "url": "https://example.com"
+   }
+   ```
+
+   #### **Success Response (`200 OK`)**
+   ```json
+   {
+     "url": "http://example.com",
+       "httpStatus": 200,
+         "responseTimeMs": 142,
+           "title": "Example Domain",
+             "metaDescription": "",
+               "h1Count": 1,
+                 "imagesMissingAlt": 0,
+                   "totalImages": 0,
+                     "wordCount": 11
+                     }
+                     ```
+                             
