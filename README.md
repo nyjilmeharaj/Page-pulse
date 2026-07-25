@@ -5,7 +5,7 @@ Page Pulse is a lightweight, high-performance Node.js web service that audits pu
 ## 🚀 Live Demo & Submission Resources
 - **Live Application:** https://page-pulse-tt50.onrender.com
 - **GitHub Repository:** https://github.com/nyjilmeharaj/Page-pulse
-- **Video Walkthrough & Submission Folder:** https://www.loom.com/share/3e886aa18c3141b18a4bae52955fca00
+- **Video Walkthrough & Submission Folder:** https://drive.google.com/file/d/1NGwGPAQlQfslTNoRh1rFfW08o2SMZiYe/view?usp=drivesdk
 
 ---
 
