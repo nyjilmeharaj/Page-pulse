@@ -1,53 +1,22 @@
-# Page Pulse ⚡
+# Page Pulse — Web-Based URL Auditor
 
-Page Pulse is a lightweight web application that audits any URL for response latency, HTTP health, key SEO tags, and image accessibility.
+Page Pulse is a lightweight, high-performance Node.js service that audits public web pages for SEO and content health metrics.
 
-## Setup & Running Locally
+## 🚀 Live Demo & Resources
+- **Live Application:** https://page-pulse-tt50.onrender.com
+- **Loom Walkthrough:** https://www.loom.com/share/3e886aa18c3141b18a4bae52955fca00
+---
 
-### Prerequisites
-- Node.js (v16.x or later)
+## 🛠️ Setup & Installation
 
-### Steps
-1. Install dependencies:
+### Local Prerequisites
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+1. Clone the repository:
    ```bash
-      npm install
-         ```
-         2. Run unit tests:
-            ```bash
-               npm test
-                  ```
-                  3. Start local server:
-                     ```bash
-                        npm start
-                           ```
-
-                           ## API Contract
-
-                           ### `POST /api/audit`
-
-                           #### Request
-                           ```json
-                           { "url": "[https://example.com](https://example.com)" }
-                           ```
-
-                           #### Success Response (`200 OK`)
-                           ```json
-                           {
-                             "url": "[https://example.com](https://example.com)",
-                               "httpStatus": 200,
-                                 "responseTimeMs": 184,
-                                   "title": "Example Domain",
-                                     "metaDescription": "Description text...",
-                                       "h1Count": 1,
-                                         "imagesMissingAlt": 0,
-                                           "totalImages": 0,
-                                             "wordCount": 35
-                                             }
-                                             ```
-
-                                             ## Key Design Decisions
-
-                                             1. **DOM Cleaning for Word Count:** Clones DOM and strips `<script>`, `<style>`, `<noscript>`, and `<svg>` elements before counting text to prevent counting CSS or JS variables.
-                                             2. **8-Second Timeout Guard:** Bounded upstream HTTP calls with 8000ms timeouts to handle slow servers gracefully (`504 Gateway Timeout`).
-                                             3. **URL Normalization:** Preprends `http://` to user input if protocol is missing before attempting parsing.
+   git clone [https://github.com/nyjilmeharaj/Page-pulse.git](https://github.com/nyjilmeharaj/Page-pulse.git)
+   cd Page-pulse
+   
                                              
